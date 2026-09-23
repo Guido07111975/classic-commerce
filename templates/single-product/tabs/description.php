@@ -1,0 +1,25 @@
+<?php
+/**
+ * Description tab
+ *
+ * This template can be overridden by copying it to yourtheme/classic-commerce/single-product/tabs/description.php.
+ *
+ * @see     https://classiccommerce.org/docs/installation-and-setup/template-structure/
+ * @author  WooThemes
+ * @package ClassicCommerce/Templates
+ * @version WC-2.0.0
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+global $post;
+
+$heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'classic-commerce' ) );
+
+?>
+
+<?php if ( $heading ) : ?>
+    <h2><?php echo esc_html( $heading ); ?></h2>
+<?php endif; ?>
+
+<?php the_content(); ?>
